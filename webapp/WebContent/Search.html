@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Radwan's DCU Library - Search</title>
+		<Link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+
+		<div class="header">
+		  <a href="/webapp/home.html">
+				<img src="images/logo2.jpg">
+			</a>
+		</div>
+
+		<div class="topnav">
+		  <a href="/webapp/home.html">Home</a>
+		  <a href="/webapp/login.html">Login </a>
+		  <a href="/webapp/Search.html">Search</a>
+		  <a href="/webapp/report.html">Report</a>
+		</div>
+		  
+
+		<div class="row">
+		  <div id ="tabs-1" class="leftcolumn">
+			<div class="card">
+			  <form  method="POST" action="/webapp/Searchservlet" >
+			  <div class="box">
+				  <div class="container-1">
+				  <h2>Search for books  by Title</h2>
+					  <span class="icon"><i class="fa fa-search"></i></span>
+					  <input type="text" name ="Tsearch"id="search1" placeholder="title Search..." />
+				<br>
+				
+				 <h2>Search for books  by Author</h2>
+					  <span class="icon"><i class="fa fa-search"></i></span>
+					  <input type="text" name ="Asearch" id="search2" placeholder="Author Search..." />
+				  <br><br>
+				  <button type="submit" value="Search" style="width:auto;">Search</button>
+				  </div>
+				</div>
+				
+				<br><br>
+				</form>
+				
+			  
+			</div>
+		  </div>
+		  
+		</div>
+
+		<div class="footer">
+		  <div class ="contact-info" >
+					<div style ="width:135px; float:left; clear:none;">
+						<ul >
+							<li style="padding-bottom:3px"><a href=
+							"http://www.dcu.ie/library/index.shtml#" title="About us">
+							About us</a></li>
+							<li><a href="http://login.mail.dcu.ie/" title
+							= "Student Email">Student Email</a>
+						</ul>
+					</div>
+					<div style ="width:135px; float:left; clear:none;">
+						<ul>
+							<li style="padding-bottom:3px">
+							<a href="http://www.dcu.ie/studentapps" title=
+							"Student Apps & Links">Student Apps</a>
+							</li>
+							<li>
+							<a href="http://loop.dcu.ie/" title="Loop">Loop</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="social-wrapper" style="float:center;">
+					<div style ="float:left;">
+						<a href="https://www.facebook.com/DCU">
+							<img src="https://www.dcu.ie/sites/all/themes/dcu_responsive/images/facebook-icon.jpg">
+						</a>
+					</div>
+					<div style ="float:left; clear:none;">
+						<a href="https://twitter.com/dublincityuni/">
+							<img src="https://www.dcu.ie/sites/all/themes/dcu_responsive/images/twitter-icon.jpg">
+						</a>
+					</div>
+					<div style="float:left; clear:none;">
+						<a href="http://www.youtube.com/user/DublinCityUniversity">
+							<img src="https://www.dcu.ie/sites/all/themes/dcu_responsive/images/youtube-icon.jpg">
+						</a>
+					</div>
+					<div style="float:left; clear:none;">
+						<a href="https://www.instagram.com/dublincityuniversity/">
+							<img src="https://www.dcu.ie/sites/all/themes/dcu_responsive/images/Instagram_Web.png">
+						</a>
+					</div>
+					
+				</div>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Radwan's DCU Library</title>
+		<Link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+
+		<div class="header">
+		  <a href="/webapp/home.html">
+				<img src="images/logo2.jpg">
+			</a>
+		</div>
+
+		<div class="topnav">
+		  <a href="/webapp/home.html">Home</a>
+		  <a href="/webapp/login.html">Login </a>
+		  <a href="/webapp/Search.html">Search</a>
+		  <a href="/webapp/report.html">Report</a>
+		</div>
+		  
+
+		<div class="row">
+ 			<div id =\"tabs-1\" class=\"leftcolumn\">\n"+
+ 					<div class="card">
+ 						<h1>Report</h1>
+ 						<br>
+ 						<h2>Name: Radwan duadu, Student Number: 143426060</h2>
+ 						<br>
+ 						<h2>login accounts</h2>
+ 						<table id="table">
+ 							<tr>
+ 							  <th>TYPE</th>
+ 							  <th>USERNAME</th>
+ 							  <th>PASSWORD</th>
+ 			 				</tr>
+ 			 				<tr>
+ 							  <td>staff</td>
+ 							  <td>hats</td>
+ 							  <td>pass</td>
+ 			 				</tr>
+ 			 				<tr>
+ 							  <td>user</td>
+ 							  <td>mit2</td>
+ 							  <td>123</td>
+ 			 				</tr>
+ 			 				<tr>
+ 							  <td>user</td>
+ 							  <td>tomy</td>
+ 							  <td>1234</td>
+ 			 				</tr>
+ 						</table>
+ 						<br>
+ 					<h2>login details</h2>
+ 					<p>The Login requires a username and password, if a wrong username or password is 
+ 					inputed the user will be redirect back to the login menu.</p>
+ 					<p>When a user is logged in it will direct a user to a page that will display
+ 					the books the user has borrowed. The format of the display is a table with the Author.
+ 					 title and date the book is due, it is not possible for the user to borrow a book using
+ 					 the web-site that i have designed</p>
+ 					<p>When a staff member logs in, they will be directed to a different page which will 
+ 					display all books available, the staff member will also be able to change, the user
+ 					who the book is assigned to, the date the book is due. and also if the book is available
+ 					for people to borrow </p>
+ 					<p>After the staff member makes an update they will be redirected to a new page, which
+ 					will display all the books( authors, title, user currently borrowing the book and due date)
+ 					this is done to give the staff member visual assurance that the changes have been made.</p>
+ 				    
+ 				    <h2>Search details</h2>
+ 				    <p>The Serach page was designed for only users use, this means that if a user is not logged in,
+ 				    they will be redirected to the log in page. And only after they log in will the search function be avialable to them.
+ 				    
+ 				    There is three types of searches, no input: this will display all books.
+ 				    title input: this will display the books matching the title searched.And finally is the author search
+ 				    which will display all books by specific author</p>
+ 				    
+ 				    <h2>Database details</h2>
+ 				    <p>Only two databases were used they are user and books database</p>
+ 				    <table id="table">
+ 							<tr>
+ 							  <th>CREAT USER DATA BASE</th>
+ 			 				</tr>
+ 			 				<tr><td>
+ 							  <p>CREATE TABLE RDLIB5_ACCS 
+								(TYPE VARCHAR(30) NOT NULL, 
+								FIRSTNAME VARCHAR(30) NOT NULL, 
+								LASTNAME VARCHAR(30) NOT NULL, 
+								USERNAME VARCHAR(30) NOT NULL, 
+								PASSWORD VARCHAR(100) NOT NULL, 
+								PRIMARY KEY (USERNAME))</p></td>
+ 			 				</tr>
+ 			 				<tr>
+ 							  <th>INSERT USERS</th>
+ 			 				</tr>
+ 			 				<tr><td>
+ 							 <p>INSERT INTO RDLIB5_ACCS('staff','straw','hat','hats','pass') 
+								 INSERT INTO RDLIB5_ACCS VALUES('User','joe','mit','mit2','123') 
+								 INSERT INTO RDLIB5_ACCS VALUES('User','tom','white','tomy','1234')</p>
+ 			 				</td>
+ 			 				</tr>
+ 			 				<tr>
+ 							  <th>BOOKS DATA BASE</th>
+ 			 				</tr>
+ 			 				<tr><td>
+ 							 <p>CREATE TABLE RDLIB5_BOOKS
+									(ID INT NOT NULL, 
+									AUTHOR VARCHAR(255) NOT NULL, 
+									TITLE VARCHAR(255) NOT NULL, 
+									AVAILABLE VARCHAR(255) NOT NULL, 
+									USERID VARCHAR(255), 
+									DUE VARCHAR(255), 
+									PRIMARYKEY(ID), 
+									CONSTRAINT RDCONT FOREIGN KEY(USERID) REFERENCES RDLIB5_ACCS)</p>
+ 			 				</td>
+ 			 				</tr>
+ 			 				<tr>
+ 							  <th>INSERT BOOKS</th>
+ 			 				</tr>
+ 			 				<tr><td>
+ 							 <p>INSERT INTO RDLIB5_BOOKS VALUES(1,'Stieg Larsson','The Girl with the Dragon Tattoo','yes') 
+								INSERT INTO RDLIB5_BOOKS VALUES(2,'J. G. Landels','Engineering in the Ancient World, Revised Edition','no','mit2','5/05/2018') 
+								INSERT INTO RDLIB5_BOOKS VALUES(3,'tom','little secret','no','mit2','15/05/2018') 
+								INSERT INTO RDLIB5_BOOKS VALUES(4,'leonard','Theory of Things','no','mit2','10/05/2018') 
+								INSERT INTO RDLIB5_BOOKS VALUES(5,'marry','the red fish','no','tomy','20/05/2018')</p>
+ 			 				</td>
+ 			 				</tr>
+ 						</table>
+ 				    </div>
+ 		 </div>
+ 	  </div>
+
+		<div class="footer">
+		  <div class ="contact-info" >
+					<div style ="width:135px; float:left; clear:none;">
+						<ul >
+							<li style="padding-bottom:3px"><a href=
+							"http://www.dcu.ie/library/index.shtml#" title="About us">
+							About us</a></li>
+							<li><a href="http://login.mail.dcu.ie/" title
+							= "Student Email">Student Email</a>
+						</ul>
+					</div>
+					<div style ="width:135px; float:left; clear:none;">
+						<ul>
+							<li style="padding-bottom:3px">
+							<a href="http://www.dcu.ie/studentapps" title=
+							"Student Apps & Links">Student Apps</a>
+							</li>
+							<li>
+							<a href="http://loop.dcu.ie/" title="Loop">Loop</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="social-wrapper" style="float:center;">
+					<div style ="float:left;">
+						<a href="https://www.facebook.com/DCU">
+							<img src="https://www.dcu.ie/sites/all/themes/dcu_responsive/images/facebook-icon.jpg">
+						</a>
+					</div>
+					<div style ="float:left; clear:none;">
+						<a href="https://twitter.com/dublincityuni/">
+							<img src="https://www.dcu.ie/sites/all/themes/dcu_responsive/images/twitter-icon.jpg">
+						</a>
+					</div>
+					<div style="float:left; clear:none;">
+						<a href="http://www.youtube.com/user/DublinCityUniversity">
+							<img src="https://www.dcu.ie/sites/all/themes/dcu_responsive/images/youtube-icon.jpg">
+						</a>
+					</div>
+					<div style="float:left; clear:none;">
+						<a href="https://www.instagram.com/dublincityuniversity/">
+							<img src="https://www.dcu.ie/sites/all/themes/dcu_responsive/images/Instagram_Web.png">
+						</a>
+					</div>
+					
+				</div>
+		</div>
+
+	</body>
+</html>
